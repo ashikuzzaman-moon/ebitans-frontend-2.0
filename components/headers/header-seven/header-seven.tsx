@@ -8,7 +8,7 @@ import { Menu, Transition } from '@headlessui/react';
 import { imgUrl, profileImg } from '@/site-settings/siteUrl';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { CgMenuLeft, CgShoppingBag } from 'react-icons/cg';
-import { BottomCart } from '../card-popup-three';
+// import { BottomCart } from '../card-popup-three';
 
 import SideMenu from '../header-three/side-menu';
 import CategorySeven from './category-seven';
@@ -306,7 +306,7 @@ const HeaderSeven = ({ design, headersetting, menu, user, cartList }: any) => {
                 )}
 
                 {/* cart open  */}
-                <BottomCart open={cartOpen} setOpen={setCartOpen} />
+                {/* <BottomCart open={cartOpen} setOpen={setCartOpen} /> */}
             </div>
 
             {/* tablet and mobile view  */}

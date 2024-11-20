@@ -4,13 +4,13 @@ import dynamic from 'next/dynamic';
 
 export const headers: any = {
     default: dynamic(
-        () => import('@/components/headers/header-three/header-three'),
+        () => import('@/components/headers/header-seven/header-seven'),
         { ssr: false }
     ),
     // one: dynamic(() => import("@/components/headers/header-one/header-one")),
     // two: dynamic(() => import("@/components/headers/header-two/header-two")),
     three: dynamic(
-        () => import('@/components/headers/header-three/header-three'),
+        () => import('@/components/headers/header-seven/header-seven'),
         { ssr: false }
     ),
     // four: dynamic(() => import("@/components/headers/header-four/header-four")),
