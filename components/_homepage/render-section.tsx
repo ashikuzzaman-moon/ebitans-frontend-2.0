@@ -1,10 +1,8 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
 
 import { useSelector } from 'react-redux';
-import BlogSection from './blog/blog-section';
 
 const Hero = dynamic(() => import('@/components/Hero'));
 const Promo = dynamic(() => import('@/components/Promo'));
@@ -83,9 +81,9 @@ const RenderSection = ({ component }: RenderSectionProps) => {
         case 'testimonial':
             return (
                 <>
-                    <Suspense fallback={<p>Loading blog...</p>}>
+                    {/* <Suspense fallback={<p>Loading blog...</p>}>
                         <BlogSection />
-                    </Suspense>
+                    </Suspense> */}
                     <Testimonial design={design} />
                 </>
             );
