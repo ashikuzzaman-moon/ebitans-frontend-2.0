@@ -1,6 +1,6 @@
 const CallForPrice = ({
     product,
-    headerSetting,
+    headersetting,
     cls,
     price,
     store_id,
@@ -9,7 +9,7 @@ const CallForPrice = ({
         <>
             {price === 0 && (
                 <div>
-                    <a href={'tel:+88' + headerSetting?.phone}>
+                    <a href={'tel:+88' + headersetting?.phone}>
                         <p className={cls}>
                             {store_id !== 2875
                                 ? 'Call for Price'
