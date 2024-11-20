@@ -172,10 +172,10 @@ const Hero = ({ design }: any) => {
                 />
             ) : (
                 <div className="p-5">
-                <div className="animate-pulse w-full bg-gray-300 h-[250px] rounded-lg flex justify-center items-center">
-                    <p>slider</p>
+                    <div className="animate-pulse w-full bg-gray-300 h-[250px] rounded-lg flex justify-center items-center">
+                        <p>slider</p>
+                    </div>
                 </div>
-            </div>
             )}
         </>
     );

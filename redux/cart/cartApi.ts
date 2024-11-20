@@ -6,4 +6,4 @@ export const cartApi = apiSlice.injectEndpoints({
     overrideExisting: false, // Optional: prevents overwriting if already defined
 });
 
-export const {  } = cartApi;
+export const {} = cartApi;

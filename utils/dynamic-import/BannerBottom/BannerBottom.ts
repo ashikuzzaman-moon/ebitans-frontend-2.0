@@ -3,15 +3,21 @@
 import dynamic from 'next/dynamic';
 
 export const banner_bottoms: any = {
-    seven: dynamic(() => import('@/components/promotions-bottom/promo-bottom-seven')),
+    seven: dynamic(
+        () => import('@/components/promotions-bottom/promo-bottom-seven')
+    ),
 
-    default: dynamic(() => import('@/components/promotions-bottom/promo-bottom-default')),
+    default: dynamic(
+        () => import('@/components/promotions-bottom/promo-bottom-default')
+    ),
 
-    ten: dynamic(() => import('@/components/promotions-bottom/promo-bottom-ten')),
-    two: dynamic(() => import('@/components/promotions-bottom/promo-bottom-two')),
-
+    ten: dynamic(
+        () => import('@/components/promotions-bottom/promo-bottom-ten')
+    ),
+    two: dynamic(
+        () => import('@/components/promotions-bottom/promo-bottom-two')
+    ),
 };
-
 
 // import PromoBottomOne from './promotions-bottom/promo-bottom-one';
 

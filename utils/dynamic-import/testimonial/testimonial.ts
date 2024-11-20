@@ -1,12 +1,14 @@
 import dynamic from 'next/dynamic';
 
 export const all_testimonials: any = {
-    seven: dynamic(() => import('@/components/_homepage/testimonial/testimonial-seven')),
+    seven: dynamic(
+        () => import('@/components/_homepage/testimonial/testimonial-seven')
+    ),
 
-    default: dynamic(() => import('@/components/_homepage/testimonial/default')),
-
+    default: dynamic(
+        () => import('@/components/_homepage/testimonial/default')
+    ),
 };
-
 
 // const TestimonialThree = dynamic(
 //     () => import(''),

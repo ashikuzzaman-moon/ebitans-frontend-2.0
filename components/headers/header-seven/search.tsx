@@ -12,7 +12,6 @@ import Link from 'next/link';
 import { useSelector } from 'react-redux';
 
 const Search = ({ search, setSearch, setSearchInput }: any) => {
-
     const storeData = useSelector((state: any) => state.appStore.store); // Access updated Redux state
     const store_id = storeData?.id || null;
 

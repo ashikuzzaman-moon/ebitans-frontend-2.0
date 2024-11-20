@@ -1,13 +1,17 @@
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
 export const all_products: any = {
-    twenty: dynamic(() => import('@/components/_homepage/product/product-twenty')),
-    seven: dynamic(() => import('@/components/_homepage/product/product-twenty')),
+    twenty: dynamic(
+        () => import('@/components/_homepage/product/product-twenty')
+    ),
+    seven: dynamic(
+        () => import('@/components/_homepage/product/product-twenty')
+    ),
 
-    default: dynamic(() => import('@/components/_homepage/product/product-twenty')),
-
+    default: dynamic(
+        () => import('@/components/_homepage/product/product-twenty')
+    ),
 };
-
 
 // const DynamicDefaultProduct = dynamic(
 //   () => import("@/components/_homepage/product/product-default"),

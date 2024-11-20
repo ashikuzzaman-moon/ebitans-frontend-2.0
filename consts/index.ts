@@ -1,4 +1,4 @@
-export const DEFAULT = 'default'
+export const DEFAULT = 'default';
 export const ONE = 'one';
 export const TWO = 'two';
 export const THREE = 'three';
@@ -40,20 +40,19 @@ export const THIRTY_EIGHT = 'thirtyeight';
 export const THIRTY_NINE = 'thirtynine';
 export const FORTY = 'forty';
 
-
 // blog page
 export const BLOG_PAGE_NUMBER = 1;
 
 // host
-export const name = typeof window !== 'undefined' ? window.location.host : '';
-function url() {
-    if (typeof window !== 'undefined') {
-        return window.location.host.startsWith('www.')
-            ? window.location.host.slice(4)
-            : window.location.host;
-    }
-    // return ''; // Optional: return an empty string if window is undefined (e.g., in server-side rendering)
-}
+// export const name = typeof window !== 'undefined' ? window.location.host : '';
+// function url() {
+//     if (typeof window !== 'undefined') {
+//         return window.location.host.startsWith('www.')
+//             ? window.location.host.slice(4)
+//             : window.location.host;
+//     }
+//     // return ''; // Optional: return an empty string if window is undefined (e.g., in server-side rendering)
+// }
 
-// export const name = url();
+export const name = 'shr.localhost:3000';
 // console.log(name);

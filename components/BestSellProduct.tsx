@@ -16,11 +16,10 @@ const BestSellProduct = ({ design, store_id }: any) => {
 
     const banner = home?.banner || [];
 
-
     const {
-      data: bestSellProductData,
-      isLoading: bestSellProductLoading,
-      isSuccess: bestSellProductSuccess,
+        data: bestSellProductData,
+        isLoading: bestSellProductLoading,
+        isSuccess: bestSellProductSuccess,
     } = useGetBestSellProductQuery({});
     const best_sell_product = bestSellProductData?.data || [];
 
@@ -28,7 +27,7 @@ const BestSellProduct = ({ design, store_id }: any) => {
         <>
             {BestSellProductComponent ? (
                 <BestSellProductComponent
-                best_sell_product={best_sell_product}
+                    best_sell_product={best_sell_product}
                     design={design}
                     store_id={store_id}
                     product={product}

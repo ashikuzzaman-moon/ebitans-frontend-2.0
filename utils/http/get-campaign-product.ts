@@ -1,21 +1,20 @@
-import httpReq from "./axios/http.service";
+import httpReq from './axios/http.service';
 
 export const getCampaignProduct = async (product: any, store_id: any) => {
-  if (product && store_id) {
-    const offerData = {
-      id: product?.id,
-      store_id,
-    };
+    if (product && store_id) {
+        const offerData = {
+            id: product?.id,
+            store_id,
+        };
 
-    try {
-      const response = await httpReq.post("get/offer/product", offerData);
-      return response;
-    } catch (error) {
-      console.error(error);
-      throw error;
+        try {
+            const response = await httpReq.post('get/offer/product', offerData);
+            return response;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
     }
-  }
 
-  return null;
+    return null;
 };
-

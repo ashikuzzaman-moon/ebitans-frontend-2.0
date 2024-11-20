@@ -1,44 +1,44 @@
-"use client";
-import { Swiper, SwiperSlide } from "swiper/react";
+'use client';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import {
-  Pagination,
-  Autoplay,
-  Navigation,
-  Controller,
-  EffectFade,
-} from "swiper/modules";
+    Pagination,
+    Autoplay,
+    Navigation,
+    Controller,
+    EffectFade,
+} from 'swiper/modules';
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 // import "./heroFiveCss/herofive.css";
-import "./hero-eleven.css";
-import { sliderImg } from "@/site-settings/siteUrl";
+import './hero-eleven.css';
+import { sliderImg } from '@/site-settings/siteUrl';
 
 const HeroEleven = ({ slider, design }: any) => {
-  let menu = [""];
+    let menu = [''];
 
-  const nextEl = "hero-slider-next";
-  const prevEl = "hero-slider-prev";
+    const nextEl = 'hero-slider-next';
+    const prevEl = 'hero-slider-prev';
 
-  const bgColor = design?.header_color;
-  const textColor = design?.text_color;
+    const bgColor = design?.header_color;
+    const textColor = design?.text_color;
 
-  const pagination = {
-    el: ".swiper-pagination-five",
-    clickable: true,
-    bulletElement: `swiper-pagination-bullet`,
+    const pagination = {
+        el: '.swiper-pagination-five',
+        clickable: true,
+        bulletElement: `swiper-pagination-bullet`,
 
-    renderBullet: function (index: number, className: string) {
-      return '<span class="' + className + '">' + menu + "</span>";
-    },
-  };
+        renderBullet: function (index: number, className: string) {
+            return '<span class="' + className + '">' + menu + '</span>';
+        },
+    };
 
-  const styleCss = `
+    const styleCss = `
 
     .swiper-pagination-five {
       position: absolute;
@@ -82,69 +82,75 @@ const HeroEleven = ({ slider, design }: any) => {
   }
 
     `;
-  return (
-    <div className="bg-white relative heroElevenBgImage">
-      <style>{styleCss}</style>
-      <div className="sm:container px-5">
-        <div className="group py-5 lg:py-5 z-0 relative rounded-md">
-          <div>
-            <div className="swiper-pagination-five"></div>
-          </div>
+    return (
+        <div className="bg-white relative heroElevenBgImage">
+            <style>{styleCss}</style>
+            <div className="sm:container px-5">
+                <div className="group py-5 lg:py-5 z-0 relative rounded-md">
+                    <div>
+                        <div className="swiper-pagination-five"></div>
+                    </div>
 
-          <div className="md:group-hover:flex hidden">
-            <div
-              className={`${prevEl} bg-gray-500 hover:bg-black text-white transition-all duration-500  ease-linear absolute left-10 top-1/2 -translate-y-1/2 z-10 `}
-            >
-              <ChevronLeftIcon
-                className="h-8 text-2xl font-serif font-bold"
-                style={{
-                  background: design?.header_color,
-                  color: design?.text_color,
-                }}
-              />
-            </div>
-            <div
-              className={`${nextEl} bg-gray-500 hover:bg-black text-white transition-all duration-500  ease-linear absolute right-10 top-1/2 -translate-y-1/2 z-10 `}
-            >
-              <ChevronRightIcon
-                className="h-8 text-2xl font-serif font-bold"
-                style={{
-                  background: design?.header_color,
-                  color: design?.text_color,
-                }}
-              />
-            </div>
-          </div>
+                    <div className="md:group-hover:flex hidden">
+                        <div
+                            className={`${prevEl} bg-gray-500 hover:bg-black text-white transition-all duration-500  ease-linear absolute left-10 top-1/2 -translate-y-1/2 z-10 `}
+                        >
+                            <ChevronLeftIcon
+                                className="h-8 text-2xl font-serif font-bold"
+                                style={{
+                                    background: design?.header_color,
+                                    color: design?.text_color,
+                                }}
+                            />
+                        </div>
+                        <div
+                            className={`${nextEl} bg-gray-500 hover:bg-black text-white transition-all duration-500  ease-linear absolute right-10 top-1/2 -translate-y-1/2 z-10 `}
+                        >
+                            <ChevronRightIcon
+                                className="h-8 text-2xl font-serif font-bold"
+                                style={{
+                                    background: design?.header_color,
+                                    color: design?.text_color,
+                                }}
+                            />
+                        </div>
+                    </div>
 
-          <Swiper
-            navigation={{
-              prevEl: `.${prevEl}`,
-              nextEl: `.${nextEl}`,
-            }}
-            loop={true}
-            spaceBetween={30}
-            effect={"fade"}
-            pagination={pagination}
-            autoplay={{
-              delay: 5000,
-            }}
-            modules={[Pagination, Autoplay, Navigation, Controller, EffectFade]}
-            className="mySwiper relative"
-          >
-            {slider?.map((s: any) => (
-              <SwiperSlide key={s.id} className="rounded-lg">
-                <img
-                  className="h-auto min-w-full rounded-3xl"
-                  src={sliderImg + s.image}
-                  alt=""
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                    <Swiper
+                        navigation={{
+                            prevEl: `.${prevEl}`,
+                            nextEl: `.${nextEl}`,
+                        }}
+                        loop={true}
+                        spaceBetween={30}
+                        effect={'fade'}
+                        pagination={pagination}
+                        autoplay={{
+                            delay: 5000,
+                        }}
+                        modules={[
+                            Pagination,
+                            Autoplay,
+                            Navigation,
+                            Controller,
+                            EffectFade,
+                        ]}
+                        className="mySwiper relative"
+                    >
+                        {slider?.map((s: any) => (
+                            <SwiperSlide key={s.id} className="rounded-lg">
+                                <img
+                                    className="h-auto min-w-full rounded-3xl"
+                                    src={sliderImg + s.image}
+                                    alt=""
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default HeroEleven;

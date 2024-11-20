@@ -3,14 +3,20 @@
 import dynamic from 'next/dynamic';
 
 export const feature_products: any = {
-    seven: dynamic(() => import('@/components/_homepage/feature-product/feature-product-seven')),
+    seven: dynamic(
+        () =>
+            import(
+                '@/components/_homepage/feature-product/feature-product-seven'
+            )
+    ),
 
-    default: dynamic(() => import('@/components/_homepage/feature-product/feature-product-seven')),
-
+    default: dynamic(
+        () =>
+            import(
+                '@/components/_homepage/feature-product/feature-product-seven'
+            )
+    ),
 };
-
-
-
 
 // import FeatureProductFive from "@/components/_homepage/feature-product/feature-product-five";
 // import FeatureProductEight from "./_homepage/feature-product/feature-product-eight";

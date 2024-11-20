@@ -3,13 +3,12 @@
 import dynamic from 'next/dynamic';
 
 import { RootState } from '@/redux/store';
-import {
-    useGetLayoutQuery,
-} from '@/redux/home/homeApi';
-
+import { useGetLayoutQuery } from '@/redux/home/homeApi';
 
 import HomeSkeleton from '@/components/loader/homeSkeleton';
-const RenderSection = dynamic(() => import('@/components/_homepage/render-section'));
+const RenderSection = dynamic(
+    () => import('@/components/_homepage/render-section')
+);
 
 const HomePage = () => {
     const {
@@ -35,7 +34,6 @@ const HomePage = () => {
                 layout?.map((item: any, index: number) => (
                     <RenderSection key={index} component={item} />
                 ))}
-         
         </>
     );
 

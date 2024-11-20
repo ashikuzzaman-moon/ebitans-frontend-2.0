@@ -14,8 +14,6 @@
 // const queryClient = new QueryClient();
 
 const StoreLayer = ({ children }: any) => {
-  
-
     return (
         <>
             {/* <Header design={design} headersetting={headersetting}/> */}

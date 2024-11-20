@@ -1,4 +1,3 @@
-
 import { DEFAULT } from '@/consts';
 import { feature_categories } from '@/utils/dynamic-import/featuredCategory/featureCategory';
 import { useSelector } from 'react-redux';

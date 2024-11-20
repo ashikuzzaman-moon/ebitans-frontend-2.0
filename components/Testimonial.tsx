@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 const Testimonial = ({ design }: any) => {
     const TestimonialComponent =
-    all_testimonials[design?.testimonials] || all_testimonials[DEFAULT];
+        all_testimonials[design?.testimonials] || all_testimonials[DEFAULT];
 
     const {
         data: testimonialsData,
@@ -14,10 +14,9 @@ const Testimonial = ({ design }: any) => {
     } = useGetTestimonialQuery({});
     const testimonials = testimonialsData?.data || [];
 
-
     return (
         <>
-        {TestimonialComponent ? (
+            {TestimonialComponent ? (
                 <TestimonialComponent
                     design={design}
                     testimonials={testimonials}
@@ -31,7 +30,8 @@ const Testimonial = ({ design }: any) => {
 
 export default Testimonial;
 
-{/* {theme === 'default' && (
+{
+    /* {theme === 'default' && (
     <TestimonialThree testimonials={testimonials} />
 )}
 {theme === 'one' && <TestimonialOne testimonials={testimonials}/>}
@@ -94,4 +94,5 @@ export default Testimonial;
 )}
 {theme === 'thirtyfive' && (
     <TestimonialThirtyFive testimonials={testimonials} />
-)} */}
+)} */
+}

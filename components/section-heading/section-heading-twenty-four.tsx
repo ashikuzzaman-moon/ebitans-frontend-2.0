@@ -1,10 +1,10 @@
 const SectionHeadingTwentyFour = ({
-  title,
-  subtitle,
-  design,
-  title_color,
+    title,
+    subtitle,
+    design,
+    title_color,
 }: any) => {
-  const classes = `
+    const classes = `
     .sec-head-bg{
         background-color:${design?.header_color};
     }
@@ -14,20 +14,20 @@ const SectionHeadingTwentyFour = ({
     }
    
     `;
-  return (
-    <div className="my-5 pb-5 w-full">
-      <style>{classes}</style>
-      <div className="text-center lg:px-60">
-        <h3
-          style={{ color: title_color }}
-          className="text-2xl md:text-3xl text-black font-extrabold uppercase mb-4"
-        >
-          {title}
-        </h3>
-        <p className="text-sm text-gray-500">{subtitle}</p>
-      </div>
-    </div>
-  );
+    return (
+        <div className="my-5 pb-5 w-full">
+            <style>{classes}</style>
+            <div className="text-center lg:px-60">
+                <h3
+                    style={{ color: title_color }}
+                    className="text-2xl md:text-3xl text-black font-extrabold uppercase mb-4"
+                >
+                    {title}
+                </h3>
+                <p className="text-sm text-gray-500">{subtitle}</p>
+            </div>
+        </div>
+    );
 };
 
 export default SectionHeadingTwentyFour;

@@ -1,10 +1,13 @@
 import dynamic from 'next/dynamic';
 
 export const new_arrival: any = {
-    seven: dynamic(() => import('@/components/new-arrival/new-arrival-product-seven')),
+    seven: dynamic(
+        () => import('@/components/new-arrival/new-arrival-product-seven')
+    ),
 
-    default: dynamic(() => import('@/components/new-arrival/new-arrival-product-seven')),
-
+    default: dynamic(
+        () => import('@/components/new-arrival/new-arrival-product-seven')
+    ),
 };
 
 // const NewArrivalProductSeven = dynamic(() => import(''),{ssr:false});

@@ -3,15 +3,16 @@
 import dynamic from 'next/dynamic';
 
 export const feature_categories: any = {
-    seven: dynamic(() => import('@/components/_homepage/featured-category/featuredcat-seven')),
+    seven: dynamic(
+        () =>
+            import('@/components/_homepage/featured-category/featuredcat-seven')
+    ),
 
-    default: dynamic(() => import('@/components/_homepage/featured-category/featuredcat-seven')),
-
+    default: dynamic(
+        () =>
+            import('@/components/_homepage/featured-category/featuredcat-seven')
+    ),
 };
-
-
-
-
 
 // import FeaturedEight from "./_homepage/featured-category/featurecat-eight";
 // import DefaultFeaturedCategory from "./_homepage/featured-category/featured-default";

@@ -14,9 +14,7 @@ import SideMenu from '../header-three/side-menu';
 import CategorySeven from './category-seven';
 import Search from './search';
 
-
-const HeaderSeven = ({ design,headersetting,menu,user,cartList }: any) => {
-    
+const HeaderSeven = ({ design, headersetting, menu, user, cartList }: any) => {
     const [open, setOpen] = useState(false);
     const [searchTxt, setSearch] = useState('');
     const [searchInput, setSearchInput] = useState(false);

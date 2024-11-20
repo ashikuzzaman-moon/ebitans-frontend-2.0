@@ -1,7 +1,14 @@
 'use client';
 import { name } from '@/consts';
 import { apiSlice } from '../api/apiSlice';
-import { setBanner, setBrand, setDesign, setHeader, setMenu,setTestimonial} from './homeSlice';
+import {
+    setBanner,
+    setBrand,
+    setDesign,
+    setHeader,
+    setMenu,
+    setTestimonial,
+} from './homeSlice';
 
 // Inject the getHome mutation endpoint into apiSlice
 export const homeApi = apiSlice.injectEndpoints({
@@ -153,5 +160,5 @@ export const {
     useGetSliderQuery,
     useGetBannerQuery,
     useGetBrandQuery,
-    useGetTestimonialQuery
+    useGetTestimonialQuery,
 } = homeApi;

@@ -9,8 +9,6 @@ const SectionHeadingTwentyFour = dynamic(
     () => import('@/components/section-heading/section-heading-twenty-four')
 );
 
-// import useHeaderSettings from "@/utils/query/use-header-settings";
-
 import { useEffect, useState } from 'react';
 
 import { useGetCategoryProductQuery } from '@/redux/products/productApi';
@@ -18,32 +16,30 @@ import { RootState } from '@/redux/store';
 import { useSelector } from 'react-redux';
 
 const ProductTwenty = ({ category, design, categoryId }: any) => {
-console.log("categoryId",categoryId);
-
     const [active, setActive] = useState(0);
     const [products, setProducts] = useState([]);
     const [id, setId] = useState(categoryId);
 
-    // const { data, error } = useHeaderSettings();
     const headerdata = useSelector((state: any) => state.home.header); // Access updated Redux state
 
     const { custom_design } = headerdata || {};
     const product = custom_design?.product?.[0] || {};
     const { title = 'Default Title', title_color = '#000' } = product || {};
 
-    const { data, isLoading,isSuccess } = useGetCategoryProductQuery({id}, {
-        // pollingInterval: 3000,
-        // refetchOnMountOrArgChange: false,
-        // skip:false
-    });
+    const { data, isLoading, isSuccess } = useGetCategoryProductQuery(
+        { id },
+        {
+            // pollingInterval: 3000,
+            // refetchOnMountOrArgChange: false,
+            // skip:false
+        }
+    );
 
     useEffect(() => {
         if (data) {
-            setProducts(data?.data?.data);   
+            setProducts(data?.data?.data);
         }
-    }, [data,isSuccess]);
-    
-
+    }, [data, isSuccess]);
 
     const styleCss = `
     .active-cat-twenty-four {
@@ -92,7 +88,10 @@ console.log("categoryId",categoryId);
                     {products?.slice(0, 8).map((productData: any) => (
                         <div key={productData.id}>
                             {/* <p>ol</p> */}
-                            <Card44 item={productData} productId={productData.id} />
+                            <Card44
+                                item={productData}
+                                productId={productData.id}
+                            />
                             {/* <Card50 item={productData} /> */}
                         </div>
                     ))}

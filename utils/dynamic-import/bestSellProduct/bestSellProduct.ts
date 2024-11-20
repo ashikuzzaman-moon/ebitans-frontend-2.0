@@ -3,13 +3,14 @@
 import dynamic from 'next/dynamic';
 
 export const best_sell_products: any = {
-    seven: dynamic(() => import('@/components/_homepage/best-seller/best-seller-seven')),
+    seven: dynamic(
+        () => import('@/components/_homepage/best-seller/best-seller-seven')
+    ),
 
-    default: dynamic(() => import('@/components/_homepage/best-seller/best-seller-seven')),
-
+    default: dynamic(
+        () => import('@/components/_homepage/best-seller/best-seller-seven')
+    ),
 };
-
-
 
 // import BestSellerEight from "./_homepage/best-seller/best-seller-eight";
 // import BestSellerFive from "./_homepage/best-seller/best-seller-five";

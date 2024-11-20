@@ -5,7 +5,6 @@ import {
     useGetHeaderSettingsQuery,
     useGetMenuQuery,
 } from '@/redux/home/homeApi';
-import { useGetFeatureProductQuery } from '@/redux/products/productApi';
 
 import dynamic from 'next/dynamic';
 import { useSelector } from 'react-redux';
@@ -21,8 +20,6 @@ export default function RootLayout({
     useGetDesignQuery({});
     useGetHeaderSettingsQuery({});
     useGetMenuQuery({});
-    // need to remove if ---
-    // useGetFeatureProductQuery({})
 
     const home = useSelector((state: any) => state?.home);
     const { design } = home || {};

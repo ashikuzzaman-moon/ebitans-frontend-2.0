@@ -10,7 +10,7 @@ const Product = ({ store_id, design }: any) => {
     const categoryStore = useSelector((state: any) => state?.category);
     const products = useSelector((state: any) => state?.products);
     const home = useSelector((state: any) => state?.home);
-    
+
     const category = categoryStore?.category || [];
     const headersetting = home?.header || [];
 
@@ -24,15 +24,15 @@ const Product = ({ store_id, design }: any) => {
                 <>
                     {category.length > 0 && (
                         <ProductComponent
-                        design={design}
-                        store_id={store_id}
-                        product={product}
-                        category={category}
-                        categoryId={category?.[0]?.id}
-                        best_sell_product={best_sell_product}
-                        feature_product={feature_product}
-                        headersetting={headersetting}
-                    />
+                            design={design}
+                            store_id={store_id}
+                            product={product}
+                            category={category}
+                            categoryId={category?.[0]?.id}
+                            best_sell_product={best_sell_product}
+                            feature_product={feature_product}
+                            headersetting={headersetting}
+                        />
                     )}
                 </>
             ) : (

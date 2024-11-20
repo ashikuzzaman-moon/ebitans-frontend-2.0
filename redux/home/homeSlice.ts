@@ -38,6 +38,14 @@ export const homeSlice = createSlice({
     },
 });
 
-export const { setHome, setHeader, setDesign, setMenu, setBanner,setBrand,setTestimonial} = homeSlice.actions;
+export const {
+    setHome,
+    setHeader,
+    setDesign,
+    setMenu,
+    setBanner,
+    setBrand,
+    setTestimonial,
+} = homeSlice.actions;
 // Export the reducer
 export const { reducerPath, reducer } = homeSlice;

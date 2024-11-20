@@ -18,7 +18,7 @@ const rootReducer = combineReducers({
     [productSlice.reducerPath]: productSlice.reducer,
     [categorySlice.reducerPath]: categorySlice.reducer,
     [pageSlice.reducerPath]: pageSlice.reducer,
-    [blogSlice.reducerPath]:blogSlice.reducer,
+    [blogSlice.reducerPath]: blogSlice.reducer,
 
     // auth: authSliceReducer,
     // messages: mesagesSliceReducer,

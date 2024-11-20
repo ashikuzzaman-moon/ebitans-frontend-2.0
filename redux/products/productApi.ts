@@ -80,13 +80,13 @@ export const productApi = apiSlice.injectEndpoints({
         // }),
 
         getSingleProduct: builder.query<any, any>({
-            query: ({store_id, productId}) => ({
+            query: ({ store_id, productId }) => ({
                 url: `get/offer/product/${store_id}/${productId}`,
                 method: 'GET',
             }),
         }),
         getCategoryProduct: builder.query<any, any>({
-            query: ({id}) => ({
+            query: ({ id }) => ({
                 url: `getcatproducts/${id}`,
                 method: 'GET',
             }),
@@ -104,5 +104,5 @@ export const {
     useGetSingleProductQuery,
     useGetCategoryProductQuery,
     useGetBestSellProductQuery,
-    useGetFeatureProductQuery
+    useGetFeatureProductQuery,
 } = productApi;

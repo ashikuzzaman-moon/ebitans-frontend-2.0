@@ -9,7 +9,6 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const Card12 = ({ item, store_id, productId }: any) => {
-
     const [camp, setCamp] = useState<any>(null);
 
     const productGetPrice = getPrice(

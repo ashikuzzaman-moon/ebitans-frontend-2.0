@@ -21,7 +21,7 @@ const Card44 = ({ item, productId }: any) => {
 
     const home = useSelector((state: any) => state?.home);
     const storeData = useSelector((state: any) => state.appStore.store); // Access updated Redux state
-    
+
     const { design } = home || {};
     const store_id = storeData?.id || null;
 

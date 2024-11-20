@@ -1,10 +1,12 @@
-"use client"
-    
+'use client';
+
 import dynamic from 'next/dynamic';
 
 export const headers: any = {
-    default: dynamic(() => import("@/components/headers/header-three/header-three"),
-    { ssr: false }),
+    default: dynamic(
+        () => import('@/components/headers/header-three/header-three'),
+        { ssr: false }
+    ),
     // one: dynamic(() => import("@/components/headers/header-one/header-one")),
     // two: dynamic(() => import("@/components/headers/header-two/header-two")),
     three: dynamic(
